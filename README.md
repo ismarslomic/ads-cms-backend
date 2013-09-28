@@ -39,34 +39,67 @@
 
 ## Media Player Information Model
 
-<code>
-          name: {
-          type: String,
-          trim: true
-          },
-          ip: String,
-          location: {
-             floor: {
-                 type: Number,
-                 min: 2,
-                 max: 4
-             },
-             zone: {
-                 type: String,
-                 default: 'external'
-             }
-          },
-          isActive: {
-             type: Boolean,
-             default: false
-          },
-          created: {
-             type: Date,
-             default: Date.now
-          },
-          updated: {
-             type: Date,
-             default: Date.now
-          }
+<pre>
+    name: {
+    type: String,
+    trim: true
+    },
+    ip: String,
+    location: {
+       floor: {
+           type: Number,
+           min: 2,
+           max: 4
+       },
+       zone: {
+           type: String,
+           default: 'external'
+       }
+    },
+    isActive: {
+       type: Boolean,
+       default: false
+    },
+    created: {
+       type: Date,
+       default: Date.now
+    },
+    updated: {
+       type: Date,
+       default: Date.now
+    }
           
-</code>
+</pre>
+
+### Example
+
+<pre>
+[
+      {
+       "name": "Ruby",
+       "ip": "127.0.0.100",
+       "_id": "5240cef5b17cf20200000001",
+       "__v": 0,
+       "updated": "2013-09-23T23:29:57.541Z",
+       "created": "2013-09-23T23:29:57.540Z",
+       "isActive": true,
+       "location": {
+           "floor": 2,
+           "zone": "external"
+       }
+      },
+      {
+       "name": "Scala",
+       "ip": "127.0.0.101",
+       "_id": "5240cef5b17cf20200000002",
+       "__v": 0,
+       "updated": "2013-09-23T23:29:57.546Z",
+       "created": "2013-09-23T23:29:57.546Z",
+       "isActive": true,
+       "location": {
+           "floor": 2,
+           "zone": "external"
+       }
+      }
+]
+</pre>
