@@ -45,7 +45,7 @@ TODO: information about the frontend app in Heroku
 
 ## Media Player Information Model
 
-<pre>
+```JSON
     name: {
     type: String,
     trim: true
@@ -108,4 +108,4 @@ TODO: information about the frontend app in Heroku
        }
       }
 ]
-</pre>
+```
