@@ -5,7 +5,7 @@ TODO: git and other operations that needs to be done to get started
 
 ## Heroku
 * Heroku application: http://ads-cms-backend.herokuapp.com
-* Heroku GIT: git@heroku.com:ads-cms-backend.git  
+* Heroku GIT: (git@heroku.com:ads-cms-backend.git) 
 TODO: information about the frontend app in Heroku
 
 ## API
