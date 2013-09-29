@@ -75,11 +75,11 @@ TODO: information about the frontend app in Heroku
        default: Date.now
     }
           
-</pre>
+```
 
 ### Example
 
-<pre>
+```JSON
 [
       {
        "name": "Ruby",
