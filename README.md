@@ -43,7 +43,9 @@ TODO: information about the frontend app in Heroku
       </tbody>
 </table>
 
-## Media Player Information Model
+## Information Model
+
+### Media Player
 
 ```javascript
     name: {
