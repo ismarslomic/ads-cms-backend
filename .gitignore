@@ -1,0 +1,7 @@
+node_modules
+dist
+distHeroku
+.tmp
+.sass-cache
+app/bower_components
+.idea
