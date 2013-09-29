@@ -3,32 +3,32 @@ var path = require('path'),
     env = process.env.NODE_ENV || 'development';
 
 var config = {
-  development: {
-    root: rootPath,
-    app: {
-      name: 'ads-cms-backend'
+    development: {
+        root: rootPath,
+        app: {
+            name: 'ads-cms-backend'
+        },
+        port: 5000,
+        db: 'mongodb://localhost/ads-cms-backend-development'
     },
-    port: 3000,
-    db: 'mongodb://localhost/ads-cms-backend-development'
-  },
 
-  test: {
-    root: rootPath,
-    app: {
-      name: 'ads-cms-backend'
+    test: {
+        root: rootPath,
+        app: {
+            name: 'ads-cms-backend'
+        },
+        port: 5000,
+        db: 'mongodb://localhost/ads-cms-backend-test'
     },
-    port: 3000,
-    db: 'mongodb://localhost/ads-cms-backend-test'
-  },
 
-  production: {
-    root: rootPath,
-    app: {
-      name: 'ads-cms-backend'
-    },
-    port: 3000,
-    db: 'mongodb://localhost/ads-cms-backend-production'
-  }
+    production: {
+        root: rootPath,
+        app: {
+            name: 'ads-cms-backend'
+        },
+        port: 5000,
+        db: 'mongodb://localhost/ads-cms-backend-production'
+    }
 };
 
 module.exports = config[env];
