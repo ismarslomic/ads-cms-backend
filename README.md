@@ -1,7 +1,25 @@
 # Accenture Digital Signage Backend
 
+## Prerequisites
+* [Git](http://git-scm.com/downloads)
+* [NodeJS and npm](http://nodejs.org/download/)
+* [MongoDB](http://www.mongodb.org/downloads)
+* [Heroku Toolbelt](https://toolbelt.heroku.com/)
+* [A Heroku user account](https://devcenter.heroku.com/articles/quickstart) (see step 1,2 and 3)
+* [Chrome Rest Console](https://chrome.google.com/webstore/detail/rest-console/cokgbflfommojglbmbpenpphppikmonn?hl=en)
+
 ## Getting started
-* TODO: git and other operations that needs to be done to get started
+```
+git clone https://github.com/ismarslomic/ads-cms-backend.git
+cd ads-cms-backend
+heroku login // only first time
+git clone git@heroku.com:ads-cms-backend.git distHeroku
+npm install
+grunt build:heroku
+cd distHeroku
+node server
+```
+You should be able to test REST API for the ADS CMS Backend. Open a web browser and go to [http://localhost:5000/api/player](http://localhost:5000/api/player)
 
 ## API
 Tip: use [Chrome Rest Console](https://chrome.google.com/webstore/detail/rest-console/cokgbflfommojglbmbpenpphppikmonn?hl=en) to test the REST API.
@@ -110,6 +128,9 @@ Tip: use [Chrome Rest Console](https://chrome.google.com/webstore/detail/rest-co
       }
 ]
 ```
+
+## Frontend
+* https://github.com/ismarslomic/ads-cms-frontend
 
 ## Heroku
 * Heroku application: http://ads-cms-backend.herokuapp.com
