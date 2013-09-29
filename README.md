@@ -7,7 +7,6 @@ TODO: git and other operations that needs to be done to get started
 TODO: information about the frontend app in Heroku
 
 ## API
-[This link](http://example.net/)
 Tip: use [Chrome Rest Console](https://chrome.google.com/webstore/detail/rest-console/cokgbflfommojglbmbpenpphppikmonn?hl=en) to test the REST API.
 <table class="table table-hover table-striped">
       <thead>
