@@ -21,6 +21,11 @@ node server
 ```
 You should be able to test REST API for the ADS CMS Backend. Open a web browser and go to [http://localhost:5000/api/player](http://localhost:5000/api/player)
 
+## Grunt tasks
+* ``` grunt build:heroku ``` - builds and optimization of the code in app folder. Destination folder is distHeroku
+* ``` grunt deploy:heroku ``` - build and deploy of distHeroku folder to Heroku application [ads-cms-frontend](http://ads-cms-frontend.herokuapp.com/)
+* ``` grunt run:heroku ``` - scales the Heroku application to 1 dyno and runs it in the web browser
+
 ## API
 Tip: use [Chrome Rest Console](https://chrome.google.com/webstore/detail/rest-console/cokgbflfommojglbmbpenpphppikmonn?hl=en) to test the REST API.
 <table class="table table-hover table-striped">
