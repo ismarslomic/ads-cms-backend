@@ -1,33 +1,15 @@
 var path = require('path'),
     rootPath = path.normalize(__dirname + '/..'),
-    env = process.env.NODE_ENV || 'development';
+    env = process.env.NODE_ENV || 'production';
 
 var config = {
-    development: {
-        root: rootPath,
-        app: {
-            name: 'ads-cms-backend'
-        },
-        port: 5000,
-        db: 'mongodb://localhost/ads-cms-backend-development'
-    },
-
-    test: {
-        root: rootPath,
-        app: {
-            name: 'ads-cms-backend'
-        },
-        port: 5000,
-        db: 'mongodb://localhost/ads-cms-backend-test'
-    },
-
     production: {
         root: rootPath,
         app: {
             name: 'ads-cms-backend'
         },
         port: 5000,
-        db: 'mongodb://localhost/ads-cms-backend-production'
+        db: process.env.MONGOLAB_URI || process.env.MONGOHQ_URL || 'mongodb://localhost/heroku_app18396634'
     }
 };
 
