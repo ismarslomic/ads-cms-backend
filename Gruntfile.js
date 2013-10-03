@@ -62,6 +62,17 @@ module.exports = function (grunt) {
                     'heroku ps:scale web=1',
                     'heroku open'
                 ].join('&&')
+            },
+            stopHeroku: {
+                options: {
+                    stdout: true,
+                    execOptions: {
+                        cwd: '<%= yeoman.distHeroku%>'
+                    }
+                },
+                command: [
+                    'heroku ps:scale web=0'
+                ].join('&&')
             }
 
         },
@@ -362,6 +373,10 @@ module.exports = function (grunt) {
 
     grunt.registerTask('run:heroku', [
         'shell:runHeroku'
+    ]);
+
+    grunt.registerTask('stop:heroku', [
+        'shell:stopHeroku'
     ]);
 
     grunt.registerTask('default', [
