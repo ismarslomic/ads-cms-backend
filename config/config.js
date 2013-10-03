@@ -8,7 +8,7 @@ var config = {
         app: {
             name: 'ads-cms-backend'
         },
-        port: 5000,
+        port: process.env.PORT || 5000,
         db: process.env.MONGOLAB_URI || process.env.MONGOHQ_URL || 'mongodb://localhost/heroku_app18396634'
     }
 };
