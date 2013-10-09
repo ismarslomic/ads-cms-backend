@@ -6,8 +6,8 @@ var mongoose = require('mongoose'),
 exports.readAllPlayers = function () {
     return function (req, res) {
         MediaPlayer.find(function (error, players) {
-            if (error)
-                res.json(error);
+            if (error) 
+                returnError(res, 400, error);
             else
                 res.json(players);
         });
@@ -55,9 +55,9 @@ exports.createPlayer = function () {
     return function (req, res) {
         var newPlayer = new MediaPlayer(req.body);
         newPlayer.save(function (error, player) {
-            if (error || !newPlayer) {
-                res.json(error);
-            } else {
+            if (error || !newPlayer)
+              returnError(res, 400, error);
+            else {
                 res.json(newPlayer);
             }
         });
@@ -85,4 +85,10 @@ exports.deletePlayer = function (req, res) {
             }
         });
     };
+};
+
+var returnError = function(response, code, err) {
+  console.log("Error! - "+err);
+  response.writeHead(code, { 'Content-Type': 'text/plain' });
+  response.end(err.toString());
 };
