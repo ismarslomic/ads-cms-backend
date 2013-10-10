@@ -1,5 +1,5 @@
 module.exports = function (app) {
-    var mediaplayerApi = require('../app/controllers/mediaplayerApi');
+    var mediaplayerApi = require('../controllers/mediaplayerApi');
 
     // Media Player API Routes
     app.get('/api/player', mediaplayerApi.readAllPlayers());

@@ -1,0 +1,1 @@
+module.exports=function(a){var b=require("../controllers/mediaplayerApi");a.get("/api/player",b.readAllPlayers()),a.get("/api/player/:id",b.readPlayer()),a.put("/api/player/:id",b.updatePlayer()),a.post("/api/player",b.createPlayer()),a.delete("/api/player/:id",b.deletePlayer())};

@@ -1,0 +1,1 @@
+var mongoose=require("mongoose"),Schema=mongoose.Schema,MediaPlayerSchema=new Schema({name:{type:String,trim:!0},ip:String,location:{floor:{type:Number,min:2,max:4},zone:{type:String,"default":"external"}},isActive:{type:Boolean,"default":!1},created:{type:Date,"default":Date.now},updated:{type:Date,"default":Date.now}});mongoose.model("MediaPlayer",MediaPlayerSchema);
